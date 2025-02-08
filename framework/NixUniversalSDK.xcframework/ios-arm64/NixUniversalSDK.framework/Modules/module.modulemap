@@ -1,0 +1,4 @@
+framework module NixUniversalSDK {
+  header "NixUniversalSDK-Swift.h"
+  requires objc
+}

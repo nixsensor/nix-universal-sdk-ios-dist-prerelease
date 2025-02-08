@@ -1,0 +1,730 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name NixUniversalSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import CommonCrypto
+import CoreBluetooth
+import Foundation
+import Security
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers public class ColorUtils : ObjectiveC.NSObject {
+  @objc public static func xyzToLab(xyz: Swift.Array<Swift.Double>, xyzRef: Swift.Array<Swift.Double>) -> Swift.Array<Swift.Double>
+  @objc public static func clipXyz(xyz: Swift.Array<Swift.Double>, xyzRef: Swift.Array<Swift.Double>) -> Swift.Array<Swift.Double>
+  @objc public static func labToXyz(lab: Swift.Array<Swift.Double>, xyzRef: Swift.Array<Swift.Double>) -> Swift.Array<Swift.Double>
+  @objc public static func deltaE76(lab1: Swift.Array<Swift.Double>, lab2: Swift.Array<Swift.Double>) -> Swift.Double
+  @objc public static func deltaE94(lab1: Swift.Array<Swift.Double>, lab2: Swift.Array<Swift.Double>, kL: Swift.Double, k1: Swift.Double, k2: Swift.Double) -> Swift.Double
+  @objc public static func deltaE94G(lab1: Swift.Array<Swift.Double>, lab2: Swift.Array<Swift.Double>) -> Swift.Double
+  @objc public static func deltaE94T(lab1: Swift.Array<Swift.Double>, lab2: Swift.Array<Swift.Double>) -> Swift.Double
+  @objc public static func deltaE00(lab1: Swift.Array<Swift.Double>, lab2: Swift.Array<Swift.Double>) -> Swift.Double
+  @objc public static func deltaE00(lab1: Swift.Array<Swift.Double>, lab2: Swift.Array<Swift.Double>, kL: Swift.Double, kC: Swift.Double, kH: Swift.Double) -> Swift.Double
+  @objc public static func deltaECmc(lab1: Swift.Array<Swift.Double>, lab2: Swift.Array<Swift.Double>, l: Swift.Double, c: Swift.Double) -> Swift.Double
+  @objc public static func adaptXyz(xyzIn: Swift.Array<Swift.Double>, refIn: Swift.Array<Swift.Double>, refOut: Swift.Array<Swift.Double>) -> Swift.Array<Swift.Double>
+  @objc public static func xyzToRgb(xyzIn: Swift.Array<Swift.Double>, refIn: Swift.Array<Swift.Double>, rChrom: Swift.Array<Swift.Double>, gChrom: Swift.Array<Swift.Double>, bChrom: Swift.Array<Swift.Double>, wChrom: Swift.Array<Swift.Double>) -> Swift.Array<Swift.Double>
+  @objc public static func rgbToXyz(rgbIn: Swift.Array<Swift.Double>, rChrom: Swift.Array<Swift.Double>, gChrom: Swift.Array<Swift.Double>, bChrom: Swift.Array<Swift.Double>, wChrom: Swift.Array<Swift.Double>, refOut: Swift.Array<Swift.Double>) -> Swift.Array<Swift.Double>
+  @objc public static func xyzToSrgb(xyzIn: Swift.Array<Swift.Double>, refIn: Swift.Array<Swift.Double>) -> Swift.Array<Swift.Int>
+  @objc public static func sRgbToXyz(sRgb: Swift.Array<Swift.Int>, refOut: Swift.Array<Swift.Double>) -> Swift.Array<Swift.Double>
+  @objc public static func xyzToLuv(xyzIn: Swift.Array<Swift.Double>, xyzRef: Swift.Array<Swift.Double>) -> Swift.Array<Swift.Double>
+  @objc public static func luvToXyz(luvIn: Swift.Array<Swift.Double>, xyzRef: Swift.Array<Swift.Double>) -> Swift.Array<Swift.Double>
+  @objc public static func labToLch(labIn: Swift.Array<Swift.Double>) -> Swift.Array<Swift.Double>
+  @objc public static func lchToLab(lchIn: Swift.Array<Swift.Double>) -> Swift.Array<Swift.Double>
+  @objc public static func luvToLch(luvIn: Swift.Array<Swift.Double>) -> Swift.Array<Swift.Double>
+  @objc public static func lchToLuv(lchIn: Swift.Array<Swift.Double>) -> Swift.Array<Swift.Double>
+  @objc(spectral10ToXyzWithLambda:reflectance:illuminant:observer:) public static func spectral10ToXyz(lambda: Swift.Array<Swift.Int>, reflectance: Swift.Array<Swift.Float>, illuminant: NixUniversalSDK.Illuminant, observer: NixUniversalSDK.Observer) -> Swift.Array<Swift.Double>
+  @objc(spectral10ToDensityWithLambda:reflectance:status:) public static func spectral10ToDensity(lambda: Swift.Array<Swift.Int>, reflectance: Swift.Array<Swift.Float>, status: NixUniversalSDK.DensityStatus) -> Swift.Array<Swift.Double>
+  @objc public static func xyzToCmyk(xyzIn: [Swift.Double], xyzRef: [Swift.Double], bpc: Swift.Bool) -> [Swift.Double]
+  @objc public static func xyzToCmyk(xyzIn: [Swift.Double], xyzRef: [Swift.Double], bpc: Swift.Bool, m: [[Swift.Double]], inputCurves: [[Swift.Int]], clut: [[Swift.Int]], outputCurves: [[Swift.Int]]) -> [Swift.Double]
+  @objc public static func cmykToXyz(cmykIn: [Swift.Double], refOut: [Swift.Double], bpc: Swift.Bool) -> [Swift.Double]
+  @objc public static func cmykToXyz(cmykIn: [Swift.Double], refOut: [Swift.Double], bpc: Swift.Bool, m: [[Swift.Double]], input: [[Swift.Int]], clut: [[Swift.Int]], output: [[Swift.Int]]) -> [Swift.Double]
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum ScanMode : Swift.UInt8, Swift.CaseIterable {
+  case M0 = 0x00
+  case M1 = 0x01
+  case M2 = 0x02
+  case NA = 0xFF
+  public var fullName: Swift.String {
+    get
+  }
+  public var legacyValue: Swift.UInt8 {
+    get
+  }
+  public var numberValue: Foundation.NSNumber {
+    get
+  }
+  public var intValue: Swift.Int {
+    get
+  }
+  public static func fromUInt8(_ byte: Swift.UInt8?) -> NixUniversalSDK.ScanMode
+  public static func fromString(_ name: Swift.String?) -> NixUniversalSDK.ScanMode
+  public static func fromNumber(_ number: Foundation.NSNumber?) -> NixUniversalSDK.ScanMode
+  public static func fromInt(_ int: Swift.Int) -> NixUniversalSDK.ScanMode
+  public static func unwrapSet(_ list: Swift.Array<Foundation.NSNumber>?) -> Swift.Set<NixUniversalSDK.ScanMode>
+  public init?(rawValue: Swift.UInt8)
+  public typealias AllCases = [NixUniversalSDK.ScanMode]
+  public typealias RawValue = Swift.UInt8
+  nonisolated public static var allCases: [NixUniversalSDK.ScanMode] {
+    get
+  }
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+extension Swift.Set where Element == NixUniversalSDK.ScanMode {
+  public var numberSet: Swift.Set<Foundation.NSNumber> {
+    get
+  }
+}
+@objc public protocol DeviceStateDelegate {
+  @objc func onConnected(_ sender: any NixUniversalSDK.IDeviceCompat)
+  @objc func onDisconnected(_ sender: any NixUniversalSDK.IDeviceCompat, status: NixUniversalSDK.DeviceStatus)
+  @objc func onBatteryStateChanged(_ sender: any NixUniversalSDK.IDeviceCompat, newState: Foundation.NSNumber)
+  @objc func onExtPowerStateChanged(_ sender: any NixUniversalSDK.IDeviceCompat, newState: Swift.Bool)
+}
+@objc public enum LicenseManagerState : Swift.Int, Swift.CaseIterable {
+  case INACTIVE = 0
+  case ACTIVE = 1
+  case ERROR_LICENSE_BAD_SIGNATURE = 2
+  case ERROR_LICENSE_INVALID_OPTIONS = 3
+  case ERROR_LICENSE_EXPIRED = 4
+  case ERROR_INTERNAL = -1
+  public var name: Swift.String {
+    get
+  }
+  public static func fromInt(_ int: Swift.Int) -> NixUniversalSDK.LicenseManagerState
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [NixUniversalSDK.LicenseManagerState]
+  public typealias RawValue = Swift.Int
+  nonisolated public static var allCases: [NixUniversalSDK.LicenseManagerState] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum DensityStatus : Swift.Int, Swift.CaseIterable {
+  case A = 1
+  case E = 2
+  case I = 3
+  case T = 4
+  case NONE = 0
+  public var fullName: Swift.String {
+    get
+  }
+  public static func fromInt(_ value: Swift.Int?) -> NixUniversalSDK.DensityStatus
+  public static func fromString(_ name: Swift.String?) -> NixUniversalSDK.DensityStatus
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [NixUniversalSDK.DensityStatus]
+  public typealias RawValue = Swift.Int
+  nonisolated public static var allCases: [NixUniversalSDK.DensityStatus] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum DeviceScannerState : Swift.Int {
+  case IDLE = 0
+  case SCANNING = 1
+  case ERROR_BLUETOOTH_PERMISSIONS = 2
+  case ERROR_BLUETOOTH_DISABLED = 3
+  case ERROR_BLUETOOTH_UNAVAILABLE = 4
+  case ERROR_INVALID_HARDWARE_ID = 5
+  case ERROR_INTERNAL = 6
+  case ERROR_LICENSE = 7
+  case COLD = -1
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol IDeviceCompat {
+  @objc var id: Swift.String { get }
+  @objc var rssi: Swift.Int { get set }
+  @objc var state: NixUniversalSDK.DeviceState { get }
+  @objc var type: NixUniversalSDK.DeviceType { get }
+  @objc var interfaceType: NixUniversalSDK.InterfaceType { get }
+  @objc var name: Swift.String { get }
+  @objc var note: Swift.String { get }
+  @objc var serialNumber: Swift.String { get }
+  @objc var firmwareVersion: NixUniversalSDK.DeviceVersion { get }
+  @objc var hardwareVersion: NixUniversalSDK.DeviceVersion { get }
+  @objc var softwareVersion: NixUniversalSDK.DeviceVersion { get }
+  @objc var batteryLevel: Foundation.NSNumber? { get }
+  @objc var powerState: Swift.Bool { get }
+  @objc var extPowerState: Swift.Bool { get }
+  @objc var scanTemperature: Foundation.NSNumber? { get }
+  @objc var referenceTemperature: Foundation.NSNumber? { get }
+  @objc var referenceDate: Foundation.Date? { get }
+  @objc var scanCount: Foundation.NSNumber? { get }
+  @objc var sdkId: Swift.String { get }
+  @objc(connect:) func connect(delegate: any NixUniversalSDK.DeviceStateDelegate)
+  @objc func disconnect()
+  @objc(ledTest:) func ledTest(completion: @escaping NixUniversalSDK.DeviceResultCallback)
+  @objc(measure:) func measure(completion: @escaping NixUniversalSDK.DeviceResultCallback)
+  @objc(measureWithModes:completion:) func measure(modes: Swift.Set<Foundation.NSNumber>, completion: @escaping NixUniversalSDK.DeviceResultCallback)
+  @objc(runFieldCalibration:completion:) func runFieldCalibration(tileString: Swift.String, completion: @escaping NixUniversalSDK.DeviceResultCallback)
+  @objc func invalidateFieldCalibration(completion: @escaping NixUniversalSDK.DeviceResultCallback)
+  @objc func isTileStringValid(_ tileString: Swift.String) -> Swift.Bool
+  @objc var supportedModes: Swift.Set<Foundation.NSNumber> { get }
+  @objc func isModeSupported(_ scanMode: NixUniversalSDK.ScanMode) -> Swift.Bool
+  @objc var providesSpectral: Swift.Bool { get }
+  @objc var providesDensity: Swift.Bool { get }
+  @objc var supportedReferences: Swift.Set<Foundation.NSNumber> { get }
+  @objc func providesColor(reference: NixUniversalSDK.ReferenceWhite) -> Swift.Bool
+  @objc(providesColorForIlluminant:andObserver:) func providesColor(illuminant: NixUniversalSDK.Illuminant, observer: NixUniversalSDK.Observer) -> Swift.Bool
+  @objc var hasOptions: Swift.Bool { get }
+  @objc var supportsFieldCalibration: Swift.Bool { get }
+  @objc var fieldCalibrationDue: Swift.Bool { get }
+  @objc var fieldCalibrationMaxDelta: Swift.Double { get set }
+  @objc var fieldCalibrationEnabled: Swift.Bool { get }
+  @objc func setFieldCalibrationEnabled(_ enabled: Swift.Bool, completion: @escaping NixUniversalSDK.DeviceResultCallback)
+  @objc var supportsTemperatureCompensation: Swift.Bool { get }
+  @objc var temperatureCompensationEnabled: Swift.Bool { get }
+  @objc func setTemperatureCompensationEnabled(_ enabled: Swift.Bool, completion: @escaping NixUniversalSDK.DeviceResultCallback)
+  @objc var supportsHapticFeedback: Swift.Bool { get }
+  @objc var hapticFeedbackEnabled: Swift.Bool { get }
+  @objc func setHapticFeedbackEnabled(_ enabled: Swift.Bool, completion: @escaping NixUniversalSDK.DeviceResultCallback)
+  @objc var supportsRgbFeedback: Swift.Bool { get }
+  @objc var rgbFeedbackEnabled: Swift.Bool { get }
+  @objc func setRgbFeedbackEnabled(_ enabled: Swift.Bool, completion: @escaping NixUniversalSDK.DeviceResultCallback)
+}
+extension NixUniversalSDK.IDeviceCompat {
+  public func measure(modes: Swift.Set<NixUniversalSDK.ScanMode>, completion: @escaping NixUniversalSDK.DeviceResultCallback)
+}
+public func == (lhs: any NixUniversalSDK.IDeviceCompat, rhs: any NixUniversalSDK.IDeviceCompat) -> Swift.Bool
+public func < (lhs: any NixUniversalSDK.IDeviceCompat, rhs: any NixUniversalSDK.IDeviceCompat) -> Swift.Bool
+public func > (lhs: any NixUniversalSDK.IDeviceCompat, rhs: any NixUniversalSDK.IDeviceCompat) -> Swift.Bool
+@_hasMissingDesignatedInitializers @objc public class LicenseManager : ObjectiveC.NSObject {
+  @objc public static var state: NixUniversalSDK.LicenseManagerState {
+    @objc get
+  }
+  @objc public static var allocations: Swift.Array<Swift.String> {
+    @objc get
+  }
+  public static var allowedDeviceTypes: Swift.Set<NixUniversalSDK.DeviceType> {
+    get
+  }
+  @objc(allowedDeviceTypes) public static var allowedDeviceTypesByNumber: Swift.Set<Foundation.NSNumber> {
+    @objc get
+  }
+  @objc public static var expiry: Foundation.Date {
+    @objc get
+  }
+  public static var features: Swift.Set<NixUniversalSDK.LicenseFeature> {
+    get
+  }
+  @objc(features) public static var featuresByNumber: Swift.Set<Foundation.NSNumber> {
+    @objc get
+  }
+  @objc public static var uuid: Swift.String {
+    @objc get
+  }
+  @objc public static var libraryVersion: Swift.String {
+    @objc get
+  }
+  @objc(isDeviceTypeSupported:) public static func isDeviceTypeSupported(_ type: NixUniversalSDK.DeviceType) -> Swift.Bool
+  @objc(isFeatureEnabled:) public static func isFeatureEnabled(_ feature: NixUniversalSDK.LicenseFeature) -> Swift.Bool
+  @discardableResult
+  @objc(activateWithOptions:andSignature:) public static func activate(options: Swift.String, signature: Swift.String) -> NixUniversalSDK.LicenseManagerState
+  @objc(deactivate) public static func deactivate()
+  @objc deinit
+}
+@objc public protocol IDeviceScanner {
+  @objc var state: NixUniversalSDK.DeviceScannerState { get }
+  @objc(startWithClosure:) func start(closure: @escaping NixUniversalSDK.DeviceFoundCallback) -> NixUniversalSDK.DeviceScannerState
+  @objc(startForPeriodMs:withClosure:) func start(scanPeriodMs: Swift.Int, closure: @escaping NixUniversalSDK.DeviceFoundCallback) -> NixUniversalSDK.DeviceScannerState
+  @objc(startSearchForId:withClosure:) func startSearchForId(_ id: Swift.String, closure: @escaping NixUniversalSDK.DeviceFoundCallback) -> NixUniversalSDK.DeviceScannerState
+  @objc(startSearchForId:forPeriodMs:withClosure:) func startSearchForId(_ id: Swift.String, scanPeriodMs: Swift.Int, closure: @escaping NixUniversalSDK.DeviceFoundCallback) -> NixUniversalSDK.DeviceScannerState
+  @objc(stop) func stop()
+}
+extension NixUniversalSDK.IDeviceScanner {
+  @available(*, deprecated, message: "Use LicenseManager.uuid instead")
+  public var sdkId: Swift.String {
+    get
+  }
+}
+@objc public class DeviceScanner : ObjectiveC.NSObject, NixUniversalSDK.IDeviceScanner {
+  public static let DEFAULT_GENERAL_SCAN_PERIOD_MS: Swift.Int
+  public static let DEFAULT_SINGLE_DEVICE_PERIOD_MS: Swift.Int
+  @objc(initWithDelegate:) public init(delegate: any NixUniversalSDK.ScannerStateDelegate)
+  @objc public var state: NixUniversalSDK.DeviceScannerState {
+    @objc get
+  }
+  @objc public func start(closure: @escaping NixUniversalSDK.DeviceFoundCallback) -> NixUniversalSDK.DeviceScannerState
+  @objc public func start(scanPeriodMs: Swift.Int, closure: @escaping NixUniversalSDK.DeviceFoundCallback) -> NixUniversalSDK.DeviceScannerState
+  @objc public func startSearchForId(_ id: Swift.String, closure: @escaping NixUniversalSDK.DeviceFoundCallback) -> NixUniversalSDK.DeviceScannerState
+  @objc public func startSearchForId(_ id: Swift.String, scanPeriodMs: Swift.Int, closure: @escaping NixUniversalSDK.DeviceFoundCallback) -> NixUniversalSDK.DeviceScannerState
+  @objc public func stop()
+  @objc deinit
+}
+extension NixUniversalSDK.IDeviceScanner {
+  public var usbDevices: [any NixUniversalSDK.IDeviceCompat] {
+    get
+  }
+}
+@objc public protocol IDensityData {
+  @objc var value: Swift.Array<Swift.Double> { get }
+  @objc var autoIndex: Swift.Int { get }
+  @objc var status: NixUniversalSDK.DensityStatus { get }
+  @objc var statusLabel: Swift.String { get }
+  @objc var mode: NixUniversalSDK.ScanMode { get }
+}
+@objc public enum DeviceStatus : Swift.Int {
+  case SUCCESS = 0
+  case ERROR_MAX_ATTEMPTS = 1
+  case ERROR_TIMEOUT = 2
+  case ERROR_UNSUPPORTED_DEVICE = 3
+  case ERROR_DROPPED_CONNECTION = 4
+  case ERROR_UNAUTHORIZED = 5
+  case ERROR_INTERNAL = 6
+  case ERROR_LICENSE = 7
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol ScannerStateDelegate {
+  @objc func onScannerInit(_ sender: any NixUniversalSDK.IDeviceScanner, state: NixUniversalSDK.DeviceScannerState)
+  @objc func onScannerStarted(_ sender: any NixUniversalSDK.IDeviceScanner)
+  @objc func onScannerStopped(_ sender: any NixUniversalSDK.IDeviceScanner)
+}
+@objc public enum LicenseFeature : Swift.Int, Swift.CaseIterable {
+  case BASIC_DATA = 0
+  case DENSITY_DATA = 1
+  case SPECTRAL_DATA = 2
+  public var name: Swift.String {
+    get
+  }
+  public static func fromInt(_ int: Swift.Int) -> NixUniversalSDK.LicenseFeature?
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [NixUniversalSDK.LicenseFeature]
+  public typealias RawValue = Swift.Int
+  nonisolated public static var allCases: [NixUniversalSDK.LicenseFeature] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class ColorData : ObjectiveC.NSObject, NixUniversalSDK.IColorData {
+  public init(xyz: Swift.Array<Swift.Double>, reference: NixUniversalSDK.ReferenceWhite = .D50_2, mode: NixUniversalSDK.ScanMode = .M2)
+  @objc public var value: Swift.Array<Swift.Double> {
+    @objc get
+  }
+  @objc public var reference: NixUniversalSDK.ReferenceWhite {
+    @objc get
+  }
+  @objc public var mode: NixUniversalSDK.ScanMode {
+    @objc get
+  }
+  @objc public var type: NixUniversalSDK.ColorType {
+    @objc get
+  }
+  @objc public var rgbValue: Swift.Array<Swift.Int> {
+    @objc get
+  }
+  @objc public func convertTo(type: NixUniversalSDK.ColorType) -> any NixUniversalSDK.IColorData
+  @objc public func compareTo(other: any NixUniversalSDK.IColorData, type: NixUniversalSDK.ColorDifferenceType = .CIE2000) -> Swift.Double
+  @objc deinit
+}
+@objc public protocol ISpectralData {
+  @objc var lambda: Swift.Array<Swift.Int> { get }
+  @objc var interval: Swift.Int { get }
+  @objc var value: Swift.Array<Swift.Float> { get }
+  @objc var mode: NixUniversalSDK.ScanMode { get }
+  @objc(toDensityDataForStatus:) func toDensityData(status: NixUniversalSDK.DensityStatus) -> (any NixUniversalSDK.IDensityData)?
+  @objc(toColorDataForReference:andType:) func toColorData(reference: NixUniversalSDK.ReferenceWhite, type: NixUniversalSDK.ColorType) -> (any NixUniversalSDK.IColorData)?
+  @objc(toColorDataForIlluminant:andObserver:andType:) func toColorData(illuminant: NixUniversalSDK.Illuminant, observer: NixUniversalSDK.Observer, type: NixUniversalSDK.ColorType) -> (any NixUniversalSDK.IColorData)?
+  @objc(toRgbValueForReference:) func toRgbValue(reference: NixUniversalSDK.ReferenceWhite) -> Swift.Array<Swift.Int>?
+  @objc(toRgbValueForIlluminant:andObserver:) func toRgbValue(illuminant: NixUniversalSDK.Illuminant, observer: NixUniversalSDK.Observer) -> Swift.Array<Swift.Int>?
+  @objc(interpolateAtLt:) func interpolate(lT: Swift.Float) -> Swift.Float
+}
+@objc public enum CommandStatus : Swift.Int {
+  case SUCCESS = 0
+  case ERROR_NOT_READY = 1
+  case ERROR_NOT_SUPPORTED = 2
+  case ERROR_INVALID_ARGUMENT = 3
+  case ERROR_LOW_POWER = 4
+  case ERROR_TIMEOUT = 5
+  case ERROR_AMBIENT_LIGHT = 6
+  case ERROR_SCAN_DELTA = 7
+  case ERROR_INTERNAL = 8
+  case WARNING_TEMPERATURE = 9
+  case ERROR_LICENSE = 10
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ColorDifferenceType : Swift.Int {
+  case CIE76
+  case CIE94G
+  case CIE94T
+  case CIE2000
+  case CMC1_1
+  case CMC2_1
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol IMeasurementData {
+  @objc var raw: Swift.String { get }
+  @objc var status: Foundation.NSNumber { get }
+  @objc var deviceType: NixUniversalSDK.DeviceType { get }
+  @objc var mode: NixUniversalSDK.ScanMode { get }
+  @objc var tRef: Foundation.NSNumber? { get }
+  @objc var tScan: Foundation.NSNumber? { get }
+  @objc var tCompEnabled: Foundation.NSNumber? { get }
+  @objc var tReal: Foundation.NSNumber? { get }
+  @objc var tileEnabled: Foundation.NSNumber? { get }
+  @objc var tileDelta: Foundation.NSNumber? { get }
+  @objc var providesSpectral: Foundation.NSNumber { get }
+  @objc var spectralData: (any NixUniversalSDK.ISpectralData)? { get }
+  @objc var providesDensity: Foundation.NSNumber { get }
+  @objc(toDensityDataForStatus:) func toDensityData(status: NixUniversalSDK.DensityStatus) -> (any NixUniversalSDK.IDensityData)?
+  @objc var supportedReferences: Swift.Set<Foundation.NSNumber> { get }
+  @objc(providesColorForReference:) func providesColor(reference: NixUniversalSDK.ReferenceWhite) -> Swift.Bool
+  @objc(providesColorForIlluminant:andObserver:) func providesColor(illuminant: NixUniversalSDK.Illuminant, observer: NixUniversalSDK.Observer) -> Swift.Bool
+  @available(*, deprecated, message: "Use providesColor(illuminant:observer:) instead")
+  @objc(providedColorForIlluminant:andObserver:) func providedColor(illuminant: NixUniversalSDK.Illuminant, observer: NixUniversalSDK.Observer) -> Swift.Bool
+  @objc(toColorDataForReference:andType:) func toColorData(reference: NixUniversalSDK.ReferenceWhite, type: NixUniversalSDK.ColorType) -> (any NixUniversalSDK.IColorData)?
+  @objc(toColorDataForIlluminant:andObserver:andType:) func toColorData(illuminant: NixUniversalSDK.Illuminant, observer: NixUniversalSDK.Observer, type: NixUniversalSDK.ColorType) -> (any NixUniversalSDK.IColorData)?
+  @objc(toRgbValueForReference:) func toRgbValue(reference: NixUniversalSDK.ReferenceWhite) -> Swift.Array<Swift.Int>?
+  @objc(toRgbValueForIlluminant:andObserver:) func toRgbValue(illuminant: NixUniversalSDK.Illuminant, observer: NixUniversalSDK.Observer) -> Swift.Array<Swift.Int>?
+}
+extension Swift.Dictionary where Key == Foundation.NSNumber, Value == any NixUniversalSDK.IMeasurementData {
+  public var scanModeMap: [NixUniversalSDK.ScanMode : any NixUniversalSDK.IMeasurementData] {
+    get
+  }
+}
+@objc public enum Illuminant : Swift.UInt8, Swift.CaseIterable {
+  case A = 0x01
+  case C = 0x02
+  case D50 = 0x03
+  case D55 = 0x04
+  case D65 = 0x05
+  case D75 = 0x06
+  case F2 = 0x07
+  case F7 = 0x08
+  case F11 = 0x09
+  case NONE = 0x00
+  public var fullName: Swift.String {
+    get
+  }
+  public static func fromFullName(_ name: Swift.String?) -> NixUniversalSDK.Illuminant
+  public static func fromUInt8(_ byte: Swift.UInt8) -> NixUniversalSDK.Illuminant
+  public static func fromInt(_ int: Swift.Int) -> NixUniversalSDK.Illuminant
+  public init?(rawValue: Swift.UInt8)
+  public typealias AllCases = [NixUniversalSDK.Illuminant]
+  public typealias RawValue = Swift.UInt8
+  nonisolated public static var allCases: [NixUniversalSDK.Illuminant] {
+    get
+  }
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+@objc public enum DeviceType : Swift.UInt8, Swift.CaseIterable {
+  case MINI = 0x00
+  case MINI2 = 0x01
+  case PRO = 0x02
+  case PRO2 = 0x03
+  case QC = 0x04
+  case SPECTRO2 = 0x05
+  case MINI3 = 0x06
+  case SPECTROL = 0x07
+  case UNKNOWN = 0xFF
+  public var shortName: Swift.String {
+    get
+  }
+  public var fullName: Swift.String {
+    get
+  }
+  public func isFeatureSupported(_ feature: NixUniversalSDK.LicenseFeature) -> Swift.Bool
+  public static func fromAdvertisingName(_ name: Swift.String?) -> NixUniversalSDK.DeviceType
+  public static func fromUint8(_ byte: Swift.UInt8) -> NixUniversalSDK.DeviceType
+  public static func fromVid(_ vid: Swift.UInt16?, pid: Swift.UInt16?) -> NixUniversalSDK.DeviceType
+  public init?(rawValue: Swift.UInt8)
+  public typealias AllCases = [NixUniversalSDK.DeviceType]
+  public typealias RawValue = Swift.UInt8
+  nonisolated public static var allCases: [NixUniversalSDK.DeviceType] {
+    get
+  }
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class MeasurementData : ObjectiveC.NSObject {
+  public static func fromRaw(_ raw: Swift.String) -> (any NixUniversalSDK.IMeasurementData)?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class DensityData : ObjectiveC.NSObject, NixUniversalSDK.IDensityData {
+  public static let DENSITY_CHANNEL_C: Swift.Int
+  public static let DENSITY_CHANNEL_M: Swift.Int
+  public static let DENSITY_CHANNEL_Y: Swift.Int
+  public static let DENSITY_CHANNEL_K: Swift.Int
+  public init(lambda: Swift.Array<Swift.Int>, reflectance: Swift.Array<Swift.Float>, mode: NixUniversalSDK.ScanMode = .M2, status: NixUniversalSDK.DensityStatus = .T)
+  @objc public var value: Swift.Array<Swift.Double> {
+    @objc get
+  }
+  @objc public var autoIndex: Swift.Int {
+    @objc get
+  }
+  @objc public var status: NixUniversalSDK.DensityStatus {
+    @objc get
+  }
+  @objc public var statusLabel: Swift.String {
+    @objc get
+  }
+  @objc public var mode: NixUniversalSDK.ScanMode {
+    @objc get
+  }
+  @objc deinit
+}
+@objc public enum ReferenceWhite : Swift.UInt16, Swift.CaseIterable {
+  case A_2 = 0x0000
+  case A_10 = 0x0001
+  case C_2 = 0x0002
+  case C_10 = 0x0003
+  case D50_2 = 0x0004
+  case D50_10 = 0x0005
+  case D55_2 = 0x0006
+  case D55_10 = 0x0007
+  case D65_2 = 0x0008
+  case D65_10 = 0x0009
+  case D75_2 = 0x000A
+  case D75_10 = 0x000B
+  case F2_2 = 0x000C
+  case F2_10 = 0x000D
+  case F7_2 = 0x000E
+  case F7_10 = 0x000F
+  case F11_2 = 0x0010
+  case F11_10 = 0x0011
+  case EMPTY = 0xFFFF
+  public var illuminant: NixUniversalSDK.Illuminant {
+    get
+  }
+  public var observer: NixUniversalSDK.Observer {
+    get
+  }
+  public var fullName: Swift.String {
+    get
+  }
+  public var shortName: Swift.String {
+    get
+  }
+  public var xyz: Swift.Array<Swift.Double> {
+    get
+  }
+  public var numberValue: Foundation.NSNumber {
+    get
+  }
+  public var intValue: Swift.Int {
+    get
+  }
+  public static func fromFullName(_ name: Swift.String?) -> NixUniversalSDK.ReferenceWhite
+  public static func fromShortName(_ name: Swift.String?) -> NixUniversalSDK.ReferenceWhite
+  public static func fromInt(_ int: Swift.Int) -> NixUniversalSDK.ReferenceWhite
+  public static func fromNumber(_ number: Foundation.NSNumber?) -> NixUniversalSDK.ReferenceWhite
+  public static func select(illuminant: NixUniversalSDK.Illuminant, observer: NixUniversalSDK.Observer) -> NixUniversalSDK.ReferenceWhite
+  public static func unwrapSet(_ list: Swift.Set<Foundation.NSNumber>?) -> Swift.Set<NixUniversalSDK.ReferenceWhite>
+  public init?(rawValue: Swift.UInt16)
+  public typealias AllCases = [NixUniversalSDK.ReferenceWhite]
+  public typealias RawValue = Swift.UInt16
+  nonisolated public static var allCases: [NixUniversalSDK.ReferenceWhite] {
+    get
+  }
+  public var rawValue: Swift.UInt16 {
+    get
+  }
+}
+extension Swift.Set where Element == NixUniversalSDK.ReferenceWhite {
+  public var numberSet: Swift.Set<Foundation.NSNumber> {
+    get
+  }
+}
+@objc public class SpectralData : ObjectiveC.NSObject, NixUniversalSDK.ISpectralData {
+  public init(lambda: Swift.Array<Swift.Int>, value: Swift.Array<Swift.Float>, mode: NixUniversalSDK.ScanMode = .M2)
+  @objc public var lambda: Swift.Array<Swift.Int> {
+    @objc get
+  }
+  @objc public var interval: Swift.Int {
+    @objc get
+  }
+  @objc public var value: Swift.Array<Swift.Float> {
+    @objc get
+  }
+  @objc public var mode: NixUniversalSDK.ScanMode {
+    @objc get
+  }
+  @objc public func toDensityData(status: NixUniversalSDK.DensityStatus = .T) -> (any NixUniversalSDK.IDensityData)?
+  @objc public func toColorData(reference: NixUniversalSDK.ReferenceWhite = .D50_2, type: NixUniversalSDK.ColorType = .CIEXYZ) -> (any NixUniversalSDK.IColorData)?
+  @objc public func toColorData(illuminant: NixUniversalSDK.Illuminant = .D50, observer: NixUniversalSDK.Observer = .CIE1931, type: NixUniversalSDK.ColorType = .CIEXYZ) -> (any NixUniversalSDK.IColorData)?
+  @objc public func toRgbValue(reference: NixUniversalSDK.ReferenceWhite) -> Swift.Array<Swift.Int>?
+  @objc public func toRgbValue(illuminant: NixUniversalSDK.Illuminant = .D50, observer: NixUniversalSDK.Observer = .CIE1931) -> Swift.Array<Swift.Int>?
+  @objc public func interpolate(lT: Swift.Float) -> Swift.Float
+  @objc deinit
+}
+@objc public enum InterfaceType : Swift.Int {
+  case UNDEFINED = 0
+  case BLE = 1
+  case USB_CDC = 2
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public typealias DeviceFoundCallback = ((any NixUniversalSDK.IDeviceCompat)?) -> Swift.Void
+public typealias DeviceResultCallback = (NixUniversalSDK.CommandStatus, [Foundation.NSNumber : any NixUniversalSDK.IMeasurementData]?) -> Swift.Void
+@objc public enum Observer : Swift.UInt8, Swift.CaseIterable {
+  case CIE1931 = 0x01
+  case CIE1964 = 0x04
+  case NONE = 0x00
+  public var fullName: Swift.String {
+    get
+  }
+  public var fov: Swift.Int {
+    get
+  }
+  public var intValue: Swift.Int {
+    get
+  }
+  public static func fromFullName(_ name: Swift.String?) -> NixUniversalSDK.Observer
+  public static func fromFov(_ fov: Swift.Int) -> NixUniversalSDK.Observer
+  public static func fromUInt8(_ byte: Swift.UInt8) -> NixUniversalSDK.Observer
+  public static func fromInt(_ int: Swift.Int) -> NixUniversalSDK.Observer
+  public init?(rawValue: Swift.UInt8)
+  public typealias AllCases = [NixUniversalSDK.Observer]
+  public typealias RawValue = Swift.UInt8
+  nonisolated public static var allCases: [NixUniversalSDK.Observer] {
+    get
+  }
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+@objc public enum ColorType : Swift.Int, Swift.CaseIterable {
+  case CIEXYZ
+  case CIELAB
+  case CIELCH
+  case CIELUV
+  public var name: Swift.String {
+    get
+  }
+  public static func fromName(_ name: Swift.String) -> NixUniversalSDK.ColorType
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [NixUniversalSDK.ColorType]
+  public typealias RawValue = Swift.Int
+  nonisolated public static var allCases: [NixUniversalSDK.ColorType] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class DeviceVersion : ObjectiveC.NSObject {
+  public init(string: Swift.String?)
+  @objc final public let string: Swift.String
+  @objc final public let prefix: Swift.String
+  @objc final public let major: Swift.Int
+  @objc final public let minor: Swift.Int
+  @objc final public let patch: Swift.Int
+  @objc deinit
+}
+@objc public enum DeviceState : Swift.Int {
+  case DISCONNECTED = 0
+  case BUSY_CONNECTING = 1
+  case BUSY_DISCOVERING = 2
+  case BUSY_SUBSCRIBING = 3
+  case BUSY_DATA_TRANSFER = 4
+  case BUSY_RUNNING_COMMAND = 5
+  case IDLE = 6
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol IColorData {
+  @objc var value: Swift.Array<Swift.Double> { get }
+  @objc var reference: NixUniversalSDK.ReferenceWhite { get }
+  @objc var mode: NixUniversalSDK.ScanMode { get }
+  @objc var type: NixUniversalSDK.ColorType { get }
+  @objc var rgbValue: Swift.Array<Swift.Int> { get }
+  @objc func convertTo(type: NixUniversalSDK.ColorType) -> any NixUniversalSDK.IColorData
+  @objc func compareTo(other: any NixUniversalSDK.IColorData, type: NixUniversalSDK.ColorDifferenceType) -> Swift.Double
+}
+extension NixUniversalSDK.ScanMode : Swift.Equatable {}
+extension NixUniversalSDK.ScanMode : Swift.Hashable {}
+extension NixUniversalSDK.ScanMode : Swift.RawRepresentable {}
+extension NixUniversalSDK.LicenseManagerState : Swift.Equatable {}
+extension NixUniversalSDK.LicenseManagerState : Swift.Hashable {}
+extension NixUniversalSDK.LicenseManagerState : Swift.RawRepresentable {}
+extension NixUniversalSDK.DensityStatus : Swift.Equatable {}
+extension NixUniversalSDK.DensityStatus : Swift.Hashable {}
+extension NixUniversalSDK.DensityStatus : Swift.RawRepresentable {}
+extension NixUniversalSDK.DeviceScannerState : Swift.Equatable {}
+extension NixUniversalSDK.DeviceScannerState : Swift.Hashable {}
+extension NixUniversalSDK.DeviceScannerState : Swift.RawRepresentable {}
+extension NixUniversalSDK.DeviceStatus : Swift.Equatable {}
+extension NixUniversalSDK.DeviceStatus : Swift.Hashable {}
+extension NixUniversalSDK.DeviceStatus : Swift.RawRepresentable {}
+extension NixUniversalSDK.LicenseFeature : Swift.Equatable {}
+extension NixUniversalSDK.LicenseFeature : Swift.Hashable {}
+extension NixUniversalSDK.LicenseFeature : Swift.RawRepresentable {}
+extension NixUniversalSDK.CommandStatus : Swift.Equatable {}
+extension NixUniversalSDK.CommandStatus : Swift.Hashable {}
+extension NixUniversalSDK.CommandStatus : Swift.RawRepresentable {}
+extension NixUniversalSDK.ColorDifferenceType : Swift.Equatable {}
+extension NixUniversalSDK.ColorDifferenceType : Swift.Hashable {}
+extension NixUniversalSDK.ColorDifferenceType : Swift.RawRepresentable {}
+extension NixUniversalSDK.Illuminant : Swift.Equatable {}
+extension NixUniversalSDK.Illuminant : Swift.Hashable {}
+extension NixUniversalSDK.Illuminant : Swift.RawRepresentable {}
+extension NixUniversalSDK.DeviceType : Swift.Equatable {}
+extension NixUniversalSDK.DeviceType : Swift.Hashable {}
+extension NixUniversalSDK.DeviceType : Swift.RawRepresentable {}
+extension NixUniversalSDK.ReferenceWhite : Swift.Equatable {}
+extension NixUniversalSDK.ReferenceWhite : Swift.Hashable {}
+extension NixUniversalSDK.ReferenceWhite : Swift.RawRepresentable {}
+extension NixUniversalSDK.InterfaceType : Swift.Equatable {}
+extension NixUniversalSDK.InterfaceType : Swift.Hashable {}
+extension NixUniversalSDK.InterfaceType : Swift.RawRepresentable {}
+extension NixUniversalSDK.Observer : Swift.Equatable {}
+extension NixUniversalSDK.Observer : Swift.Hashable {}
+extension NixUniversalSDK.Observer : Swift.RawRepresentable {}
+extension NixUniversalSDK.ColorType : Swift.Equatable {}
+extension NixUniversalSDK.ColorType : Swift.Hashable {}
+extension NixUniversalSDK.ColorType : Swift.RawRepresentable {}
+extension NixUniversalSDK.DeviceState : Swift.Equatable {}
+extension NixUniversalSDK.DeviceState : Swift.Hashable {}
+extension NixUniversalSDK.DeviceState : Swift.RawRepresentable {}
