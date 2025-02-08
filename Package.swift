@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "nix-universal-sdk-ios-dist-prerelease",
+    name: "NixUniversalSDK",
     platforms: [
         .iOS(.v12),
         .macOS(.v10_13),
