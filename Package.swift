@@ -1,10 +1,4 @@
-//
-//  Package.swift
-//  NixUniversalSDK
-//
-//  Created by James Strack on 2025-02-07.
-//
-
+// swift-tools-version:5.7
 import PackageDescription
 
 let package = Package(
