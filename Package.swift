@@ -21,6 +21,6 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "NixUniversalSDK",
-            path: "framework/NixUniversalSDK.xcframework")
+            path: "NixUniversalSDK.xcframework")
     ]
 )
