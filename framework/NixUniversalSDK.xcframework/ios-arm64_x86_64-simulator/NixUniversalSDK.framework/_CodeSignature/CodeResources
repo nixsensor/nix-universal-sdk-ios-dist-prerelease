@@ -8,9 +8,13 @@
 		<data>
 		l6UXCO4vmXEIp7T7Ra7vdUUXYSQ=
 		</data>
+		<key>Headers/TypeAliases.h</key>
+		<data>
+		IaKtlV0zvuNpzeBiHMGM5UGHOoE=
+		</data>
 		<key>Headers/universalsdk.h</key>
 		<data>
-		F68Kw0f0jNRcHCX5utgapCJbKPQ=
+		uekJHfk0lIoOeSJNX98cP5i2vmg=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -90,11 +94,18 @@
 			RNasyA3771P4CppkxqvPEDKw7lyDDGMP+3HxA6x1h1M=
 			</data>
 		</dict>
+		<key>Headers/TypeAliases.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			etqVgGzLNokfauGWiwaaOyKsSbFkJjBNSRx4CYMZf50=
+			</data>
+		</dict>
 		<key>Headers/universalsdk.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4xs4MMCnapqDkBk7EysNTlZw8DTV+Iy7oxeYzX/n3Uk=
+			BITUL43q7y7RPlM8kE6L7ZtRIyJBFcV9ucL5hvMIoIg=
 			</data>
 		</dict>
 		<key>Modules/NixUniversalSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
