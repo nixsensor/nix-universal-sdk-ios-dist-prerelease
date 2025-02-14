@@ -35,7 +35,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LYE3d4GiIyYtTb5H139Aj2A/7AxoaGmREtzolh4/yQ0=
+			yDPlKE72BhzX81Bp8/P5PTgD9xX8CoyHhVfR3a5I2qs=
 			</data>
 		</dict>
 		<key>Headers/TypeAliases.h</key>
@@ -56,7 +56,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kvG5xst/4ihzfBIX9Q/7HOHvWtnifAmBP+Xxm0XKEHI=
+			NtTP25wZpBJRYVNd555lC2I6PdWKLm/9B3PuqPLsEMQ=
 			</data>
 		</dict>
 		<key>Modules/NixUniversalSDK.swiftmodule/arm64-apple-macos.private.swiftinterface</key>
@@ -70,7 +70,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lCNK1vEJc5QhlJQRsyFiEQcRnWdOCmuRgxOGlvBZg6w=
+			qPr/6kQj6Z5WnkUNM3GM+aEBFzXm/zk5qDkFU0K6k9s=
 			</data>
 		</dict>
 		<key>Modules/NixUniversalSDK.swiftmodule/arm64-apple-macos.swiftinterface</key>
@@ -91,7 +91,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kvG5xst/4ihzfBIX9Q/7HOHvWtnifAmBP+Xxm0XKEHI=
+			NtTP25wZpBJRYVNd555lC2I6PdWKLm/9B3PuqPLsEMQ=
 			</data>
 		</dict>
 		<key>Modules/NixUniversalSDK.swiftmodule/x86_64-apple-macos.private.swiftinterface</key>
@@ -105,7 +105,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			V//9/7RJupVRLk5/7mXqwiLLhVL4ZRqFbpT0N3lCsco=
+			lh4+gg+acku8OceCwInKgsS8IyS7Nh7UEqyENttAXlI=
 			</data>
 		</dict>
 		<key>Modules/NixUniversalSDK.swiftmodule/x86_64-apple-macos.swiftinterface</key>

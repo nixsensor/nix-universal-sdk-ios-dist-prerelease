@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/NixUniversalSDK-Swift.h</key>
 		<data>
-		VwJMLtN6IuUvb/vNV1qvkAfatn4=
+		fVDzwZOaURiE30h3YDhpU9/Uyb4=
 		</data>
 		<key>Headers/TypeAliases.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/NixUniversalSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		qqGzkdxAKlmnnYVWlrFXcnaT0cs=
+		+dHEkoXPKp4ui6L89iHJHqWQLxs=
 		</data>
 		<key>Modules/NixUniversalSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/NixUniversalSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		Rv9xOP84EW7fSOX2p2wZzI8NOsk=
+		u/8a7gUujg4/AOe72nQ+ddW7MuQ=
 		</data>
 		<key>Modules/NixUniversalSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
@@ -71,7 +71,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wJl0flLk5fUskus48INV1Fvn8E8Zgt4K+/rCQQuDmbg=
+			S0Ox8jYEDThUUGJBYXycCqkU1qECnCr7W3sY0w+186U=
 			</data>
 		</dict>
 		<key>Headers/TypeAliases.h</key>
@@ -92,7 +92,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			v/1LPp36vKSx6BPsTqq76+7tNlZFW6Z0zrOFyclWERw=
+			CmUmadf/nv5siF7jevWFdkqgYstxT5zilqPAtj+wQYM=
 			</data>
 		</dict>
 		<key>Modules/NixUniversalSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -106,7 +106,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7hTm7aMc4KEKkdQvkRg09Ert6t7jS0q9AwGCPp7Khcc=
+			WQMLeC1s0UprQ6z+h6wGc/L3WP3oVMBsMEPI5sae7p0=
 			</data>
 		</dict>
 		<key>Modules/NixUniversalSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>

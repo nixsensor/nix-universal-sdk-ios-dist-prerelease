@@ -24386,42 +24386,42 @@
     {
       "filePath": "\/Users\/strackj\/GitHub\/nix-universal-sdk-ios\/framework\/universalsdk\/utils\/LicenseManager.swift",
       "kind": "Array",
-      "offset": 6613,
+      "offset": 6612,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/strackj\/GitHub\/nix-universal-sdk-ios\/framework\/universalsdk\/utils\/LicenseManager.swift",
       "kind": "StringLiteral",
-      "offset": 9098,
+      "offset": 9109,
       "length": 28,
       "value": "\"CFBundleShortVersionString\""
     },
     {
       "filePath": "\/Users\/strackj\/GitHub\/nix-universal-sdk-ios\/framework\/universalsdk\/utils\/LicenseManager.swift",
       "kind": "StringLiteral",
-      "offset": 9150,
+      "offset": 9161,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/strackj\/GitHub\/nix-universal-sdk-ios\/framework\/universalsdk\/utils\/LicenseManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 11624,
+      "offset": 11635,
       "length": 2,
       "value": "65"
     },
     {
       "filePath": "\/Users\/strackj\/GitHub\/nix-universal-sdk-ios\/framework\/universalsdk\/utils\/LicenseManager.swift",
       "kind": "Array",
-      "offset": 11672,
+      "offset": 11683,
       "length": 237,
       "value": "[0x30, 0x59, 0x30, 0x13, 0x06, 0x07, 0x2A, 0x86, 0x48, 0xCE, 0x3D, 0x02, 0x01, 0x06, 0x08, 0x2A, 0x86, 0x48, 0xCE, 0x3D, 0x03, 0x01, 0x07, 0x03, 0x42, 0x00]"
     },
     {
       "filePath": "\/Users\/strackj\/GitHub\/nix-universal-sdk-ios\/framework\/universalsdk\/utils\/LicenseManager.swift",
       "kind": "StringLiteral",
-      "offset": 12167,
+      "offset": 12178,
       "length": 126,
       "value": "\"MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEbQbLS5QW3sMx0sN\/wwUaGAGm\/c0y2Hf+VzXBskyk6+ikJLR5f7U7V+ubJeR5Ge6xxclbboPb0m22O1Otfhtjkg==\""
     },

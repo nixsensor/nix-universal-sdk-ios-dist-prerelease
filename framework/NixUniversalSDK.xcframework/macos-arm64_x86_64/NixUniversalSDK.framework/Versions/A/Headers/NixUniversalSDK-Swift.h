@@ -1398,7 +1398,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSArray<NSStri
 /// Set of <code>NSNumber</code> containing the <code>DeviceType</code> values enabled by the current license.
 /// <ul>
 ///   <li>
-///     See also <code>allowedDeviceTypes</code> for convenience in Swift
+///     See also <code>allowedDeviceTypes-4f98s</code> for convenience in Swift
 ///   </li>
 /// </ul>
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSSet<NSNumber *> * _Nonnull allowedDeviceTypes;)
@@ -1409,7 +1409,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSDate * _Nonn
 /// Set of <code>NSNumber</code> containing the <code>LicenseFeature</code> values enabled by the current license.
 /// <ul>
 ///   <li>
-///     See also: <code>features</code> for convenience in Swift
+///     See also: <code>features-3nk3h</code> for convenience in Swift
 ///   </li>
 /// </ul>
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSSet<NSNumber *> * _Nonnull features;)
@@ -2977,7 +2977,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSArray<NSStri
 /// Set of <code>NSNumber</code> containing the <code>DeviceType</code> values enabled by the current license.
 /// <ul>
 ///   <li>
-///     See also <code>allowedDeviceTypes</code> for convenience in Swift
+///     See also <code>allowedDeviceTypes-4f98s</code> for convenience in Swift
 ///   </li>
 /// </ul>
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSSet<NSNumber *> * _Nonnull allowedDeviceTypes;)
@@ -2988,7 +2988,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSDate * _Nonn
 /// Set of <code>NSNumber</code> containing the <code>LicenseFeature</code> values enabled by the current license.
 /// <ul>
 ///   <li>
-///     See also: <code>features</code> for convenience in Swift
+///     See also: <code>features-3nk3h</code> for convenience in Swift
 ///   </li>
 /// </ul>
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSSet<NSNumber *> * _Nonnull features;)
