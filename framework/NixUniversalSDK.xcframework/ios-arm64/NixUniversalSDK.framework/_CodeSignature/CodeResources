@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/NixUniversalSDK-Swift.h</key>
 		<data>
-		fVDzwZOaURiE30h3YDhpU9/Uyb4=
+		jnl6Pz+MMvLk1emKbH7eJhT6cT8=
 		</data>
 		<key>Headers/TypeAliases.h</key>
 		<data>
@@ -18,31 +18,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ehEPH2TYB4UAEtuCgb9G1AQ8Y3c=
+		2t6lhyZ9bkO94oGKgwi5VBJgkdQ=
 		</data>
 		<key>Modules/NixUniversalSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		+dHEkoXPKp4ui6L89iHJHqWQLxs=
+		/ZNU8iTDx+jPAKLGNRtaOhR2VC4=
 		</data>
 		<key>Modules/NixUniversalSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		BQE5gtB9GnHYfXpmZHT3ylFo7y0=
+		dlw5Mv7Psg5HNpBCZnOFx0xxxGI=
 		</data>
 		<key>Modules/NixUniversalSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		u/8a7gUujg4/AOe72nQ+ddW7MuQ=
+		RwqrAjVfQJKO3drtjgiN4LemIa4=
 		</data>
 		<key>Modules/NixUniversalSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		BQE5gtB9GnHYfXpmZHT3ylFo7y0=
+		dlw5Mv7Psg5HNpBCZnOFx0xxxGI=
 		</data>
 		<key>Modules/NixUniversalSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		p9BiRDOM35hb/ZMfUUZ+U3HL0Fw=
+		YdDFbHGYZDs1DEFKkR9HxYToeV8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		tioZM3bc6Vd6z/TFCLkf7q9HIUM=
+		InJ/OoPvSRQCxpsXFM5MucvbjSU=
 		</data>
 		<key>a2b1_clut.json</key>
 		<data>
@@ -71,7 +71,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			S0Ox8jYEDThUUGJBYXycCqkU1qECnCr7W3sY0w+186U=
+			j54q/hbFX0x92FuhflPaKbBVF9ev/zsOkFUrevLwikA=
 			</data>
 		</dict>
 		<key>Headers/TypeAliases.h</key>
@@ -92,42 +92,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CmUmadf/nv5siF7jevWFdkqgYstxT5zilqPAtj+wQYM=
+			e99sRoeDEzEBGhiriHgP4OwJMXNLzdEt+MiZ+YYJNnc=
 			</data>
 		</dict>
 		<key>Modules/NixUniversalSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			T64PKyJXLv0estagSHgMNQ5kJuNmbMlvE1dy7n1SeuE=
+			/1ZO+HiUBFzJj1mXH8I+yHkwhxHAKHVmc3lYndpSSv8=
 			</data>
 		</dict>
 		<key>Modules/NixUniversalSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WQMLeC1s0UprQ6z+h6wGc/L3WP3oVMBsMEPI5sae7p0=
+			BnI7ogDLznylHqgwrIzj4ZthSYVmxd4ajMXLMDwSOEE=
 			</data>
 		</dict>
 		<key>Modules/NixUniversalSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			T64PKyJXLv0estagSHgMNQ5kJuNmbMlvE1dy7n1SeuE=
+			/1ZO+HiUBFzJj1mXH8I+yHkwhxHAKHVmc3lYndpSSv8=
 			</data>
 		</dict>
 		<key>Modules/NixUniversalSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uDsv/hOhS8lEhZYF4jEjOczKcA3uOwgoHYp2gqnxL7E=
+			mxQNXxhGXzKmHWRwhqsOPY84+6cWrmKtJF6BFBU5USQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8Cj8r4wq+1o6TX1TPwnMGzUmU0GG+ScVKAMPzzGfPEU=
+			t/PkNbATdHdTzgM/aA1yBZfkBaFXL48B8IKFiBSdzK0=
 			</data>
 		</dict>
 		<key>a2b1_clut.json</key>

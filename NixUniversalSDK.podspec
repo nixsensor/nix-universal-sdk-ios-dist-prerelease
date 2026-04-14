@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name          = 'NixUniversalSDK'
-  spec.version       = '4.2.1'
+  spec.version       = '4.2.3'
   spec.summary       = 'Library for Nix device integration'
   spec.description   = 'A library to allow integration of Nix devices into third party macOS and iOS applications'
   spec.homepage      = 'https://www.nixsensor.com'
